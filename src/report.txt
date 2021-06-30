@@ -1,0 +1,13 @@
+For Customised Scheduling, 
+I used an non-preemptive algorithm Short Job First (SJF). 
+It works by assuming total job time for a process are known in advance and choose the process with the smallest runtimes for the next execution. 
+It performs better when all processes are available at the same time. 
+Since SJF will not stop the current process’s execution, it performs bad when a shorter process arrives while a longer process is currently running. 
+It has to wait for a long time until this longer process finish executing which does not take advantage of SJF. 
+
+For Customised Memory Management, 
+I chose to evict the pages of the processes who currently occupied the most pages in memory
+It performs better when the distribution the pages in memory be occupied is imbalance. 
+So unlike least-recently-used that each time the process will be applied evicting is always changing, 
+it reduces the number of new process be applied evicting which means less loading required in total. 
+The turnaround time will be smaller. But if the every process occupied same number of pages currently in memory, it does not take advantage of it.
